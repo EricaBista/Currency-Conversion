@@ -1,0 +1,30 @@
+<%= javascript_include_tag('currency_converter.js') %>
+<label> From Currency Unit</label>
+
+<select name="base" id="base">
+
+  <option value="">Select Currency</option>
+  <option value="GBP">British Pound</option>
+  <option value="AUD">Australian Dollar</option>
+  <option value="JPY">Japanese Yen</option>
+  <option value="USD">Americian Dollar</option>
+
+</select>
+
+<input type="text" id="from_amount" placeholder="Enter From Curreny Amount"/>
+
+<label> To Currency Unit</label>
+
+<select name="rates" id="rates">
+
+  <option value="">Select Currency</option>
+  <option value="GBP">British Pound</option>
+  <option value="AUD">Australian Dollar</option>
+  <option value="JPY">Japanese Yen</option>
+  <option value="USD">Americian Dollar</option>
+
+</select>
+
+<input type="text" readonly id="to_amount" placeholder="to Curreny Amount"/>
+
+<input type="button" class="btn" id="get_conversion_rate" value="Get Conversion">
