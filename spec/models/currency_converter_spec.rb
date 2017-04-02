@@ -1,7 +1,9 @@
 require 'spec_helper'
 describe "CurrencyConverter site" do
-  it 'sets base currency' do
-    get 'https://api.fixer.io/latest?base=USD'
-    json['base'].must_equal 'USD'
+  it 'converts one currency to another' do
+    RestClient = double
+    response = double
+    response.stub(:code) { 200 }
+    RestClient.stub(:get) { response }
   end
 end
